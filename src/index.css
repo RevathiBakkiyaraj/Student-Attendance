@@ -1,0 +1,499 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+}
+
+
+/* Light Theme */
+
+body.light {
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* Dark Theme */
+
+body.dark {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+}
+
+
+.app {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 30px auto;
+}
+
+
+/* Theme button */
+
+.theme-button {
+    float: right;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #333;
+    color: white;
+}
+
+
+body.dark .theme-button {
+    background-color: white;
+    color: #222;
+}
+
+
+/* Header */
+
+.header {
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body.dark .header {
+    background-color: #292929;
+}
+
+
+.header h1 {
+    margin-top: 0;
+}
+
+
+.stats {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+
+.stat {
+    min-width: 130px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background-color: #f0f0f0;
+
+    text-align: center;
+}
+
+
+body.dark .stat {
+    background-color: #3a3a3a;
+}
+
+
+.stat strong {
+    display: block;
+
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat span {
+    font-size: 14px;
+}
+
+
+/* Clear button */
+
+.clear-button {
+    margin-top: 20px;
+
+    padding: 10px 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #dc3545;
+
+    color: white;
+}
+
+
+/* Student form */
+
+.student-form {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.student-form input {
+    flex: 1;
+
+    padding: 12px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 6px;
+}
+
+
+.student-form button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #007bff;
+
+    color: white;
+}
+
+
+/* Controls */
+
+.controls {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+
+.controls input,
+.controls select {
+    padding: 10px;
+
+    border: 1px solid #aaa;
+
+    border-radius: 6px;
+}
+
+
+.student-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* Student card */
+
+.student-card {
+    margin-bottom: 20px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body.dark .student-card {
+    background-color: #292929;
+}
+
+
+.student-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.student-header h3 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+
+.student-header button {
+    padding: 7px 12px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #ffc107;
+}
+
+
+/* Edit */
+
+.edit-section {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+}
+
+
+.edit-section input {
+    flex: 1;
+
+    padding: 9px;
+}
+
+
+.edit-section button {
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 5px;
+}
+
+
+/* Current status */
+
+.current-status {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    background-color: #f5f5f5;
+}
+
+
+body.dark .current-status {
+    background-color: #3a3a3a;
+}
+
+
+.current-status h4 {
+    margin-top: 0;
+}
+
+
+.present {
+    font-weight: bold;
+
+    color: green;
+}
+
+
+.absent {
+    font-weight: bold;
+
+    color: red;
+}
+
+
+/* Attendance buttons */
+
+.present-button {
+    padding: 9px 14px;
+
+    margin-right: 8px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #28a745;
+
+    color: white;
+}
+
+
+.absent-button {
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #dc3545;
+
+    color: white;
+}
+
+
+/* Percentage */
+
+.percentage {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 6px;
+
+    background-color: #e9ecef;
+}
+
+
+body.dark .percentage {
+    background-color: #3a3a3a;
+}
+
+
+.percentage span {
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* History */
+
+.history {
+    margin-top: 20px;
+}
+
+
+.history table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+.history th,
+.history td {
+    padding: 10px;
+
+    border: 1px solid #aaa;
+
+    text-align: left;
+}
+
+
+/* Delete */
+
+.delete-button {
+    margin-top: 20px;
+
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #dc3545;
+
+    color: white;
+}
+
+
+/* No students */
+
+.no-students {
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .app {
+        width: 95%;
+    }
+
+
+    .student-form {
+        flex-direction: column;
+    }
+
+
+    .controls {
+        flex-direction: column;
+    }
+
+
+    .controls input,
+    .controls select {
+        width: 100%;
+    }
+
+
+    .stats {
+        flex-direction: column;
+    }
+
+
+    .stat {
+        width: 100%;
+    }
+
+
+    .student-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .edit-section {
+        flex-direction: column;
+    }
+
+}
